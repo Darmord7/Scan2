@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Top area style - begin
+   ========================================================================== */
+$left-right-spacing: 12px;
+
+#qodef-top-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding: $full-width-side-padding;
+    background-color: $box-background-color;
+    z-index: 101; /* Header has Z-index 100, top header has greater value because of dropdown in header top (wpml) */
+
+    &-inner {
+        align-items: center;
+        display: flex;
+        height: 40px;
+        justify-content: space-between;
+        padding: $full-width-side-padding;
+        position: relative;
+
+        &.qodef-content-grid {
+            padding: 0 !important;
+        }
+    }
+    
+    .qodef-widget-holder {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        
+        // IE11 issues with flexbox and search form item
+        &.qodef-top-area-left {
+            margin-right: auto;
+        }
+    
+        &.qodef-top-area-right {
+            margin-left: auto;
+        }
+        
+        .widget {
+            margin: 0 $left-right-spacing;
+            
+            &:first-child {
+                margin-left: 0;
+            }
+            
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    
+    .widget {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+    
+        .textwidget > *,
+        .widget p {
+            margin: 0;
+        }
+
+        &.widget_nav_menu {
+            ul li {
+                display: inline-block;
+                margin-right: 25px;
+                font-size: 14px;
+                margin-bottom: 3px;
+
+                a {
+                    color: rgba(255,255,255,.8);
+                    
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &.widget_easymeals_membership_login_opener {
+            height: 100%;
+
+            .qodef-user-logged--out .lnr {
+                color: #fee86d;
+                padding-right: 5px;
+            }
+            
+            .qodef-login-opener-text {
+                color: #fff;
+            }
+
+            .qodef-m-navigation-items {
+                padding: 10px 15px;
+                width: auto;
+                min-width: 145px;
+                left: -9px;
+            }
+        }
+    }
+    
+    div[id^="monster-widget-placeholder"],
+    div[id^="woo-monster-widget-placeholder"] {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   Top area style - end
+   ========================================================================== */

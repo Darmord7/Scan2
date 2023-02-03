@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Header layout styles
+   ========================================================================== */
+
+$left-right-spacing: 12px; // Same size needs to be as in easymeals-core/inc/header/assets/css/scss/_common-default.scss
+
+.qodef-header--divided {
+
+	#qodef-page-header {
+
+		.qodef-divided-header-left-wrapper,
+		.qodef-divided-header-right-wrapper {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.qodef-divided-header-left-wrapper {
+			> .qodef-header-navigation:only-child {
+				margin-left: auto;
+			}
+		}
+
+		.qodef-divided-header-right-wrapper {
+			.qodef-header-navigation>ul>li:first-child {
+				margin-left: 0;
+			}
+
+			.widget:last-child {
+				position: relative;
+				padding-left: 20px;
+
+				&:before {
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					height: 32px;
+					width: 1px;
+					background-color: #eae9e7;
+				}
+			}
+		}
+		
+		.qodef-header-logo-link {
+			justify-content: center;
+		}
+		
+		.qodef-header-navigation {
+			margin: 0 75px;
+
+			@include qodefScreenSize1366 {
+				margin: 0 40px;
+			}
+		}
+		
+		.qodef-widget-holder {
+			margin-left: 0;
+		}
+	}
+
+	#qodef-page-header-inner {
+		align-items: center;
+		justify-content: center;
+	}
+}

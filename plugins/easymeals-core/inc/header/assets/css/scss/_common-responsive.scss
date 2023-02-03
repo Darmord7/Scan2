@@ -1,0 +1,10 @@
+@include qodefScreenSize1024 {
+
+	.qodef-before-header-widget-holder {
+		display: none;
+	}
+
+	body:not(.qodef-content-behind-header) #qodef-page-outer {
+		margin-top: 0 !important; //overrides margin that header puts on content
+	}
+}

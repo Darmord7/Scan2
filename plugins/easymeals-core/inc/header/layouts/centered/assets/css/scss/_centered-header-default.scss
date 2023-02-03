@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Header layout styles
+   ========================================================================== */
+
+$left-right-spacing: 12px; // Same size needs to be as in easymeals-core/inc/header/assets/css/scss/_common-default.scss
+
+.qodef-header--centered {
+	
+	#qodef-page-header {
+		height: 250px;
+	}
+	
+	#qodef-page-header-inner {
+		flex-direction: column;
+		justify-content: center;
+
+		.qodef-centered-header-top-wrapper {
+			display: flex;
+			width: 100%;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+		}
+		
+		> .qodef-centered-header-wrapper {
+			display: flex;
+			width: 100%;
+			align-items: center;
+			justify-content: space-between;
+			height: 66px;
+			border-top: 1px solid #eae9e7;
+			border-bottom: 1px solid #eae9e7;
+
+			> * {
+				flex: 1;
+			}
+			> .qodef-widget-holder:last-child {
+				justify-content: flex-end;
+			}
+			
+			.qodef-widget-holder {
+				margin-left: 0;
+			}
+			
+			.qodef-header-navigation {
+				margin: 0 $left-right-spacing * 2;
+			}
+		}
+	}
+}

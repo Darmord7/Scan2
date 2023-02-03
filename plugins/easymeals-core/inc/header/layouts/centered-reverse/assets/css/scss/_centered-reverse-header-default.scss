@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Header layout styles
+   ========================================================================== */
+
+$left-right-spacing: 12px; // Same size needs to be as in easymeals-core/inc/header/assets/css/scss/_common-default.scss
+
+.qodef-header--centered-reverse {
+	
+	.qodef-header-navigation>ul>li>a {
+		font-size: 12px;
+	}
+	
+	#qodef-page-header {
+		height: 265px;
+
+		@include qodefScreenSize1440 {
+			height: 200px;
+		}
+		
+		.qodef-centered-reverse-header-wrapper {
+			width: 100%;
+			justify-content: space-between;
+			height: 50px;
+		}
+
+		.qodef-centered-reverse-logo-wrapper {
+			height: 100%;
+		}
+	}
+	
+	&.qodef-header--light {
+		
+		#qodef-page-header {
+			.qodef-centered-reverse-header-wrapper {
+				background-color: $heading-color;
+			}
+		}
+	}
+	
+	#qodef-page-header-inner {
+		flex-direction: column;
+		justify-content: center;
+		padding: 0;
+		
+		> div {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			
+			.qodef-widget-holder {
+				margin-left: 0;
+				flex: 1;
+
+				&:last-child {
+					justify-content: flex-end;
+				}
+			}
+			
+			.qodef-header-navigation {
+				margin: 0 $left-right-spacing * 2;
+			}
+		}
+		
+		.qodef-centered-reverse-top-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 100%;
+		}
+
+		.widget_easymeals_core_search_opener{
+			align-items: center;
+			height: 100%;
+
+			> a,
+			> a * {
+				height: 100%;
+			}
+
+			.qodef-search-opener {
+
+				&:hover {
+
+					.qodef-m-icon span {
+						background-color: #fbdd33;
+					}
+				}
+
+				.qodef-m-icon span {
+					width: 52px;
+					background-color: $main-color;
+					color: #2d2d28;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					transition: background-color .2s ease-out;
+				}
+			}
+		}
+		.qodef-search-opener.qodef-source--icon-pack {
+			font-size: 16px;
+		}
+	}
+}
